@@ -1,22 +1,30 @@
 package com.linkedlist;
 
 public class LinkedList {
-    public static void main(String[] args) {
-    System.out.println("Welcome to Data Structures, We will be working with Linked List");
-    Node first=new Node(56);
-    Node second=new Node(30);
-    Node third=new Node(70);
+    Node head, tail;
 
-    Node head=first;
-    first.next=second;
-    second.next=third;
-    Node tail =third;
-
-    Node temp = head;
-    while(temp!=null){
-        System.out.println(temp.data);
-        temp =temp.next;
+    public Node push(int data) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            Node temp = head;
+            this.head = newNode;
+            newNode.next = temp;
+        }
+        return newNode;
     }
 
-}
+    public void print() {
+        if (head == null) {
+            System.out.println("There's nothing in the linked list");
+        } else {
+            Node temp = head;
+            while (temp != null) {
+                System.out.println(temp.data);
+                temp = temp.next;
+            }
+        }
+    }
 }
