@@ -25,6 +25,11 @@ public class LinkedList {
             tail = newNode;
         }
     }
+    public void insertInBetween(Node previousNode ,Node newNode){
+        Node temp = previousNode.next;
+        previousNode.next = newNode;
+        newNode.next = temp;
+    }
 
     public void print() {
         if (head == null) {
