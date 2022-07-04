@@ -8,5 +8,6 @@ public class Entry {
         Operations.insertInBetween();
         Operations.pop();
         Operations.removeFromEnd();
+        Operations.search();
     }
 }

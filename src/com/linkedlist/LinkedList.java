@@ -47,6 +47,33 @@ public class LinkedList {
         }
     }
 
+    public void search(int searchNode)
+    {
+        if(head.data == searchNode)
+            System.out.println(searchNode + " Exists");
+        else
+        {
+            Node temp=head;
+
+            boolean exists=false;
+
+            while(temp!=null)
+            {
+                if(temp.data == searchNode)
+                {
+                    exists = true;
+                    break;
+                }
+
+                temp=temp.next;
+            }
+            if(exists == true)
+                System.out.println(searchNode+ " Exists");
+            else
+                System.out.println("There is no such node in the list");
+        }
+    }
+
     public void print() {
         if (head == null) {
             System.out.println("There's nothing in the linked list");
