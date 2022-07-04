@@ -30,6 +30,11 @@ public class LinkedList {
         previousNode.next = newNode;
         newNode.next = temp;
     }
+    public void pop() {
+        Node temp = head;
+        head = temp.next;
+        temp = null;
+    }
 
     public void print() {
         if (head == null) {

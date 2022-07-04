@@ -30,4 +30,17 @@ public class Operations {
         System.out.println("After");
         linkedList.print();
     }
+
+    public static void pop(){
+        LinkedList linkedList=new LinkedList();
+        Node first= linkedList.push(70);
+        Node second= linkedList.push(30);
+        Node third=linkedList.push(56);
+        System.out.println("Deleting Node from Starting");
+        System.out.println("Before");
+        linkedList.print();
+        linkedList.pop();
+        System.out.println("After");
+        linkedList.print();
+    }
 }

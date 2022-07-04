@@ -6,5 +6,6 @@ public class Entry {
         Operations.pushAtStart();
         Operations.appendData();
         Operations.insertInBetween();
+        Operations.pop();
     }
 }
