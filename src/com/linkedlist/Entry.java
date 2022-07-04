@@ -7,5 +7,6 @@ public class Entry {
         Operations.appendData();
         Operations.insertInBetween();
         Operations.pop();
+        Operations.removeFromEnd();
     }
 }
